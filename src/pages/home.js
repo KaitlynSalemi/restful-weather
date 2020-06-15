@@ -14,6 +14,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import { ReactComponent as SunSVG } from '../assests/SVGs/sun.svg';
 
 
 
@@ -126,7 +127,24 @@ function Home() {
                     </Card>
                 </Grid>
                 <Grid item l={7}>
-                    <Paper>Current Weather</Paper>
+                    <Card>
+                        <CardContent>
+                            <Grid container>
+                                <Grid item md={7}>
+                                    <h3>Evanston, IL</h3>
+                                    <h1>62°</h1>
+                                    <h4>Sunny</h4>
+                                    <p>High/Low: 65°/56°</p>
+                                    <p>Humidity: 76%</p>
+                                    <p>Wind: 12mph</p>
+                                    <p>UV Index: 9 of 10</p>
+                                </Grid>
+                                <Grid item md={5} sx={12}>
+                                    <SunSVG/>
+                                </Grid>
+                            </Grid>
+                        </CardContent>
+                    </Card>
                     <h3>Hourly Forcast:</h3>
                     <Grid container item xs={12}>
                         <FormHourlyRow />
