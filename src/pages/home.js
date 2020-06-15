@@ -26,7 +26,16 @@ const useStyles = makeStyles({
         margin: '0 0 1rem 0',
     },
     container: {
-        height: '100vh'
+        height: '100vh',
+    },
+    widthFill: {
+        width: '100%',
+    },
+    verticalAlign: {
+        margin: 'auto 0',
+    },
+    bold: {
+        fontWeight: 'bold'
     }
 });
 
@@ -84,12 +93,12 @@ function Home() {
     }
 
     return (
-        <Container className={classes.container} maxWidth='md'>
+        <Container className={classes.container} maxWidth='lg'>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <h1 className={classes.center}>RESTful Weather</h1>
                     </Grid>
-                <Grid item l={5}>
+                <Grid item md={3}>
                     <form>
                         <TextField 
                             className={classes.marginBottum}
@@ -126,21 +135,21 @@ function Home() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item l={7}>
+                <Grid item md={9}>
                     <Card>
                         <CardContent>
                             <Grid container>
-                                <Grid item md={7}>
-                                    <h3>Evanston, IL</h3>
+                                <Grid item md={7} sx={12}>
+                                    <h2>Evanston, IL</h2>
                                     <h1>62°</h1>
-                                    <h4>Sunny</h4>
-                                    <p>High/Low: 65°/56°</p>
-                                    <p>Humidity: 76%</p>
-                                    <p>Wind: 12mph</p>
-                                    <p>UV Index: 9 of 10</p>
+                                    <h3>Sunny</h3>
+                                    <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
+                                    <p><span className={classes.bold}>Humidity:</span> 76%</p>
+                                    <p><span className={classes.bold}>Wind:</span> 12mph</p>
+                                    <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
                                 </Grid>
-                                <Grid item md={5} sx={12}>
-                                    <SunSVG/>
+                                <Grid item md={5} sx={12} className={classes.verticalAlign}>
+                                    <SunSVG />
                                 </Grid>
                             </Grid>
                         </CardContent>
