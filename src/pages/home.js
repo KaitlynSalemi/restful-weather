@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Paper from '@material-ui/core/Paper';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -126,47 +127,51 @@ function Home() {
                             }} 
                         />
                     </form>
-                    <Card>
-                        <CardContent>
-                            <List>
-                                <ListItem button>
-                                    <ListItemText primary="Los Angeles, CA" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="New York, NY" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="Chicago, IL" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="London, England" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="Toykyo, Japan" />
-                                </ListItem>
-                            </List>
-                        </CardContent>
-                    </Card>
+                    <Paper>
+                        <List>
+                            <ListItem button>
+                                <ListItemText primary="Los Angeles, CA" />
+                            </ListItem>
+                            <Divider />
+                            <ListItem button>
+                                <ListItemText primary="New York, NY" />
+                            </ListItem>
+                            <Divider />
+                            <ListItem button>
+                                <ListItemText primary="Chicago, IL" />
+                            </ListItem>
+                            <Divider />
+                            <ListItem button>
+                                <ListItemText primary="London, England" />
+                            </ListItem>
+                            <Divider />
+                            <ListItem button>
+                                <ListItemText primary="Toykyo, Japan" />
+                            </ListItem>
+                        </List>
+                    </Paper>
                 </Grid>
                 <Grid item md={9}>
                     <Card>
                         <CardContent>
                             <Grid container>
-                                <Grid item md={7} xs={12}>
-                                    <h2>Evanston, IL</h2>
-                                    <h1>62°</h1>
-                                    <h3>Sunny</h3>
-                                    <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
-                                    <p><span className={classes.bold}>Humidity:</span> 76%</p>
-                                    <p><span className={classes.bold}>Wind:</span> 12mph</p>
-                                    <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
+                                <Grid item md={3} xs={12}>
+                                    <Box m={2}>
+                                        <h2>Evanston, IL</h2>
+                                        <h1>62°</h1>
+                                        <h3>Sunny</h3>
+                                    </Box>
                                 </Grid>
-                                <Grid item md={5} xs={12} className={classes.verticalAlign}>
-                                    <SunSVG />
+                                <Grid item md={3} xs={12}>
+                                    <Box m={2}>
+                                        <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
+                                        <p><span className={classes.bold}>Humidity:</span> 76%</p>
+                                        <p><span className={classes.bold}>Wind:</span> 12mph</p>
+                                        <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
+                                    </Box>
+                                </Grid>
+                                <Grid item md={6} xs={12} className={classes.centerText}>
+                                    <SunSVG style={{ width: '50%' }}/>
                                 </Grid>
                             </Grid>
                         </CardContent>
@@ -182,7 +187,7 @@ function Home() {
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                <Divider orientation='vertical' flexItem='true'/>
+                                {/* <Divider orientation='vertical' flexItem='true'/> */}
                                 <Grid item xs={2}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
@@ -190,7 +195,7 @@ function Home() {
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                <Divider orientation='vertical' flexItem='true'/>
+                                {/* <Divider orientation='vertical' flexItem='true'/> */}
                                 <Grid item xs={2}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
@@ -198,7 +203,7 @@ function Home() {
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                <Divider orientation='vertical' flexItem='true'/>
+                                {/* <Divider orientation='vertical' flexItem='true'/> */}
                                 <Grid item xs={2}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
@@ -206,7 +211,7 @@ function Home() {
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                <Divider orientation='vertical' flexItem='true'/>
+                                {/* <Divider orientation='vertical' flexItem='true'/> */}
                                 <Grid item xs={2}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
@@ -214,7 +219,7 @@ function Home() {
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                <Divider orientation='vertical' flexItem='true'/>
+                                {/* <Divider orientation='vertical' flexItem='true'/> */}
                                 <Grid item xs={2}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
