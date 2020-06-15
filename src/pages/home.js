@@ -6,9 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
-import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
-// import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -42,29 +40,62 @@ const useStyles = makeStyles({
 function Home() {
     const classes = useStyles();
 
-    function Form7DayRow(){
+    function FormDailyRow(){
         return (
             <React.Fragment>
-                <Grid item l={1}>
-                    <Paper>Sat 13th</Paper>
+                <Grid item xs={2}>
+                    <Card>
+                        <CardContent className={classes.center}>
+                            <h4>Sat 13</h4>
+                            <p>63°</p>
+                            <SunSVG/>
+                        </CardContent>
+                    </Card>
                 </Grid>
-                <Grid item l={1}>
-                    <Paper>Sat 13th</Paper>
+                <Grid item xs={2}>
+                    <Card>
+                        <CardContent className={classes.center}>
+                            <h4>Sat 13</h4>
+                            <p>63°</p>
+                            <SunSVG/>
+                        </CardContent>
+                    </Card>
                 </Grid>
-                <Grid item l={1}>
-                    <Paper>Sat 13th</Paper>
+                <Grid item xs={2}>
+                    <Card>
+                        <CardContent className={classes.center}>
+                            <h4>Sat 13</h4>
+                            <p>63°</p>
+                            <SunSVG/>
+                        </CardContent>
+                    </Card>
                 </Grid>
-                <Grid item l={1}>
-                    <Paper>Sat 13th</Paper>
+                <Grid item xs={2}>
+                    <Card>
+                        <CardContent className={classes.center}>
+                            <h4>Sat 13</h4>
+                            <p>63°</p>
+                            <SunSVG/>
+                        </CardContent>
+                    </Card>
                 </Grid>
-                <Grid item l={1}>
-                    <Paper>Sat 13th</Paper>
+                <Grid item xs={2}>
+                    <Card>
+                        <CardContent className={classes.center}>
+                            <h4>Sat 13</h4>
+                            <p>63°</p>
+                            <SunSVG/>
+                        </CardContent>
+                    </Card>
                 </Grid>
-                <Grid item l={1}>
-                    <Paper>Sat 13th</Paper>
-                </Grid>
-                <Grid item l={1}>
-                    <Paper>Sat 13th</Paper>
+                <Grid item xs={2}>
+                    <Card>
+                        <CardContent className={classes.center}>
+                            <h4>Sat 13</h4>
+                            <p>63°</p>
+                            <SunSVG/>
+                        </CardContent>
+                    </Card>
                 </Grid>
             </React.Fragment>
         );
@@ -74,19 +105,19 @@ function Home() {
         return (
             <React.Fragment>
                 <Grid item l={1}>
-                    <Paper>1pm</Paper>
+                    <Card>1pm</Card>
                 </Grid>
                 <Grid item l={1}>
-                    <Paper>2pm</Paper>
+                    <Card>2pm</Card>
                 </Grid>
                 <Grid item l={1}>
-                    <Paper>3pm</Paper>
+                    <Card>3pm</Card>
                 </Grid>
                 <Grid item l={1}>
-                    <Paper>4pm</Paper>
+                    <Card>4pm</Card>
                 </Grid>
                 <Grid item l={1}>
-                    <Paper>5pm</Paper>
+                    <Card>5pm</Card>
                 </Grid>
             </React.Fragment>
         );
@@ -155,12 +186,14 @@ function Home() {
                         </CardContent>
                     </Card>
                     <h3>Hourly Forcast:</h3>
-                    <Grid container item xs={12}>
-                        <FormHourlyRow />
+                    <Grid container spacing={3}>
+                        <Grid item xs={12}>
+                            <FormHourlyRow />
+                        </Grid>
                     </Grid>
-                    <h3>7-Day Forcast:</h3>
-                    <Grid container item xs={12}>
-                        <Form7DayRow />
+                    <h3>Daily Forcast:</h3>
+                    <Grid container spacing={1}>
+                        <FormDailyRow />
                     </Grid>
                 </Grid>
             </Grid>
