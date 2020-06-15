@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -13,12 +14,16 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import { ReactComponent as SunSVG } from '../assests/SVGs/sun.svg';
+import { ReactComponent as CloudSVG } from '../assests/SVGs/cloud.svg';
 
 
 
 const useStyles = makeStyles({
-    center: {
+    centerText: {
        textAlign: 'center',
+    },
+    centerContent: {
+        margin: '0 auto',
     },
     marginBottum: {
         margin: '0 0 1rem 0',
@@ -34,6 +39,9 @@ const useStyles = makeStyles({
     },
     bold: {
         fontWeight: 'bold'
+    },
+    inline: {
+        display: 'inline-block',
     }
 });
 
@@ -45,7 +53,7 @@ function Home() {
             <React.Fragment>
                 <Grid item xs={2}>
                     <Card>
-                        <CardContent className={classes.center}>
+                        <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
                             <p>63°</p>
                             <SunSVG/>
@@ -54,7 +62,7 @@ function Home() {
                 </Grid>
                 <Grid item xs={2}>
                     <Card>
-                        <CardContent className={classes.center}>
+                        <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
                             <p>63°</p>
                             <SunSVG/>
@@ -63,7 +71,7 @@ function Home() {
                 </Grid>
                 <Grid item xs={2}>
                     <Card>
-                        <CardContent className={classes.center}>
+                        <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
                             <p>63°</p>
                             <SunSVG/>
@@ -72,7 +80,7 @@ function Home() {
                 </Grid>
                 <Grid item xs={2}>
                     <Card>
-                        <CardContent className={classes.center}>
+                        <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
                             <p>63°</p>
                             <SunSVG/>
@@ -81,7 +89,7 @@ function Home() {
                 </Grid>
                 <Grid item xs={2}>
                     <Card>
-                        <CardContent className={classes.center}>
+                        <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
                             <p>63°</p>
                             <SunSVG/>
@@ -90,34 +98,12 @@ function Home() {
                 </Grid>
                 <Grid item xs={2}>
                     <Card>
-                        <CardContent className={classes.center}>
+                        <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
                             <p>63°</p>
                             <SunSVG/>
                         </CardContent>
                     </Card>
-                </Grid>
-            </React.Fragment>
-        );
-    }
-
-    function FormHourlyRow(){
-        return (
-            <React.Fragment>
-                <Grid item l={1}>
-                    <Card>1pm</Card>
-                </Grid>
-                <Grid item l={1}>
-                    <Card>2pm</Card>
-                </Grid>
-                <Grid item l={1}>
-                    <Card>3pm</Card>
-                </Grid>
-                <Grid item l={1}>
-                    <Card>4pm</Card>
-                </Grid>
-                <Grid item l={1}>
-                    <Card>5pm</Card>
                 </Grid>
             </React.Fragment>
         );
@@ -127,7 +113,7 @@ function Home() {
         <Container className={classes.container} maxWidth='lg'>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <h1 className={classes.center}>RESTful Weather</h1>
+                    <h1 className={classes.centerText}>RESTful Weather</h1>
                     </Grid>
                 <Grid item md={3}>
                     <form>
@@ -170,7 +156,7 @@ function Home() {
                     <Card>
                         <CardContent>
                             <Grid container>
-                                <Grid item md={7} sx={12}>
+                                <Grid item md={7} xs={12}>
                                     <h2>Evanston, IL</h2>
                                     <h1>62°</h1>
                                     <h3>Sunny</h3>
@@ -179,18 +165,66 @@ function Home() {
                                     <p><span className={classes.bold}>Wind:</span> 12mph</p>
                                     <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
                                 </Grid>
-                                <Grid item md={5} sx={12} className={classes.verticalAlign}>
+                                <Grid item md={5} xs={12} className={classes.verticalAlign}>
                                     <SunSVG />
                                 </Grid>
                             </Grid>
                         </CardContent>
                     </Card>
                     <h3>Hourly Forcast:</h3>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12}>
-                            <FormHourlyRow />
-                        </Grid>
-                    </Grid>
+                    <Card>
+                        <CardContent>
+                            <Grid container spacing={5}>
+                                <Grid item xs={2}>
+                                    <Box className={classes.centerText}>
+                                        <h4>1pm</h4>
+                                        <p>63°/43°</p>
+                                        <CloudSVG/>
+                                    </Box>
+                                </Grid>
+                                <Divider orientation='vertical' flexItem='true'/>
+                                <Grid item xs={2}>
+                                    <Box className={classes.centerText}>
+                                        <h4>1pm</h4>
+                                        <p>63°/43°</p>
+                                        <CloudSVG/>
+                                    </Box>
+                                </Grid>
+                                <Divider orientation='vertical' flexItem='true'/>
+                                <Grid item xs={2}>
+                                    <Box className={classes.centerText}>
+                                        <h4>1pm</h4>
+                                        <p>63°/43°</p>
+                                        <CloudSVG/>
+                                    </Box>
+                                </Grid>
+                                <Divider orientation='vertical' flexItem='true'/>
+                                <Grid item xs={2}>
+                                    <Box className={classes.centerText}>
+                                        <h4>1pm</h4>
+                                        <p>63°/43°</p>
+                                        <CloudSVG/>
+                                    </Box>
+                                </Grid>
+                                <Divider orientation='vertical' flexItem='true'/>
+                                <Grid item xs={2}>
+                                    <Box className={classes.centerText}>
+                                        <h4>1pm</h4>
+                                        <p>63°/43°</p>
+                                        <CloudSVG/>
+                                    </Box>
+                                </Grid>
+                                <Divider orientation='vertical' flexItem='true'/>
+                                <Grid item xs={2}>
+                                    <Box className={classes.centerText}>
+                                        <h4>1pm</h4>
+                                        <p>63°/43°</p>
+                                        <CloudSVG/>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                        </CardContent>
+                    </Card>
                     <h3>Daily Forcast:</h3>
                     <Grid container spacing={1}>
                         <FormDailyRow />
