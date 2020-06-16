@@ -7,6 +7,7 @@ function DailyCardBox() {
 
     return (
         <Box>
+            <h3>Daily Forcast:</h3>
             <Grid container spacing={1}>
                 <Grid item sm={2} xs={4}>
                     <DailyCard/>

@@ -11,6 +11,7 @@ const useStyles = makeStyles ({
     },
     textField: {
         margin: '0 0 1rem 0',
+        width: '100%'
     }
 })
 

@@ -8,30 +8,33 @@ import HourlyBox from '../components/hourlyBox';
 function HourlyCard() {
 
     return (
-        <Card>
-            <CardContent>
-                <Grid container spacing={5}>
-                    <Grid item sm={2} xs={4}>
-                        <HourlyBox/>
+        <div>
+            <h3>Hourly Forcast:</h3>
+            <Card>
+                <CardContent>
+                    <Grid container spacing={5}>
+                        <Grid item sm={2} xs={4}>
+                            <HourlyBox/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <HourlyBox/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <HourlyBox/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <HourlyBox/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <HourlyBox/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <HourlyBox/>
+                        </Grid>
                     </Grid>
-                    <Grid item sm={2} xs={4}>
-                        <HourlyBox/>
-                    </Grid>
-                    <Grid item sm={2} xs={4}>
-                        <HourlyBox/>
-                    </Grid>
-                    <Grid item sm={2} xs={4}>
-                        <HourlyBox/>
-                    </Grid>
-                    <Grid item sm={2} xs={4}>
-                        <HourlyBox/>
-                    </Grid>
-                    <Grid item sm={2} xs={4}>
-                        <HourlyBox/>
-                    </Grid>
-                </Grid>
-            </CardContent>
-        </Card>
+                </CardContent>
+            </Card>
+        </div>
     )
 }
 
