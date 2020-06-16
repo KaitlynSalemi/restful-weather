@@ -10,6 +10,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Paper from '@material-ui/core/Paper';
+import Hidden from '@material-ui/core/Hidden';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -43,6 +44,10 @@ const useStyles = makeStyles({
     },
     inline: {
         display: 'inline-block',
+    },
+    currentWeatherSVG: {
+        textAlign: 'center',
+        margin: 'auto 0',
     }
 });
 
@@ -52,7 +57,7 @@ function Home() {
     function FormDailyRow(){
         return (
             <React.Fragment>
-                <Grid item xs={2}>
+                <Grid item sm={2} xs={4}>
                     <Card>
                         <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
@@ -61,7 +66,7 @@ function Home() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item sm={2} xs={4}>
                     <Card>
                         <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
@@ -70,7 +75,7 @@ function Home() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item sm={2} xs={4}>
                     <Card>
                         <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
@@ -79,7 +84,7 @@ function Home() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item sm={2} xs={4}>
                     <Card>
                         <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
@@ -88,7 +93,7 @@ function Home() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item sm={2} xs={4}>
                     <Card>
                         <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
@@ -97,7 +102,7 @@ function Home() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item sm={2} xs={4}>
                     <Card>
                         <CardContent className={classes.centerText}>
                             <h4>Sat 13</h4>
@@ -115,9 +120,9 @@ function Home() {
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <h1 className={classes.centerText}>RESTful Weather</h1>
-                    </Grid>
-                <Grid item md={3}>
-                    <form>
+                </Grid>
+                <Grid item md={3} xs={12}>
+                    <form className={classes.centerText}>
                         <TextField 
                             className={classes.marginBottum}
                             id="standard-basic" 
@@ -127,46 +132,49 @@ function Home() {
                             }} 
                         />
                     </form>
-                    <Paper>
-                        <List>
-                            <ListItem button>
-                                <ListItemText primary="Los Angeles, CA" />
-                            </ListItem>
-                            <Divider />
-                            <ListItem button>
-                                <ListItemText primary="New York, NY" />
-                            </ListItem>
-                            <Divider />
-                            <ListItem button>
-                                <ListItemText primary="Chicago, IL" />
-                            </ListItem>
-                            <Divider />
-                            <ListItem button>
-                                <ListItemText primary="London, England" />
-                            </ListItem>
-                            <Divider />
-                            <ListItem button>
-                                <ListItemText primary="Toykyo, Japan" />
-                            </ListItem>
-                        </List>
-                    </Paper>
+                    <Hidden smDown>
+                        <Paper>
+                            <List>
+                                <ListItem button>
+                                    <ListItemText primary="Los Angeles, CA" />
+                                </ListItem>
+                                <Divider />
+                                <ListItem button>
+                                    <ListItemText primary="New York, NY" />
+                                </ListItem>
+                                <Divider />
+                                <ListItem button>
+                                    <ListItemText primary="Chicago, IL" />
+                                </ListItem>
+                                <Divider />
+                                <ListItem button>
+                                    <ListItemText primary="London, England" />
+                                </ListItem>
+                                <Divider />
+                                <ListItem button>
+                                    <ListItemText primary="Toykyo, Japan" />
+                                </ListItem>
+                            </List>
+                        </Paper>
+                    </Hidden>
+                    
                 </Grid>
-                <Grid item md={9}>
+                <Grid item md={9} xs={12}>
                     <Card>
                         <CardContent>
                             <Grid container>
-                                <Grid container item md={6} xs={12}>
+                                <Grid container item xs={6}>
                                     <Grid item xs={12}>
                                         <h2>Evanston, IL</h2>
                                     </Grid>
-                                    <Grid item md={6} xs={12}>
-                                        <Box m={0}>
+                                    <Grid item sm={6} xs={12}>
+                                        <Box>
                                             <h1>62°</h1>
                                             <h3>Sunny</h3>
                                         </Box>
                                     </Grid>
-                                    <Grid item md={6} xs={12}>
-                                        <Box m={0}>
+                                    <Grid item sm={6} xs={12}>
+                                        <Box>
                                             <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
                                             <p><span className={classes.bold}>Humidity:</span> 76%</p>
                                             <p><span className={classes.bold}>Wind:</span> 12mph</p>
@@ -174,7 +182,7 @@ function Home() {
                                         </Box>
                                     </Grid>
                                 </Grid>
-                                <Grid item md={6} xs={12} className={classes.centerText}>
+                                <Grid item xs={6} className={classes.currentWeatherSVG}>
                                     <SunSVG style={{ width: '50%' }}/>
                                 </Grid>
                             </Grid>
@@ -184,47 +192,42 @@ function Home() {
                     <Card>
                         <CardContent>
                             <Grid container spacing={5}>
-                                <Grid item xs={2}>
+                                <Grid item sm={2} xs={4}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
                                         <p>63°/43°</p>
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                {/* <Divider orientation='vertical' flexItem='true'/> */}
-                                <Grid item xs={2}>
+                                <Grid item sm={2} xs={4}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
                                         <p>63°/43°</p>
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                {/* <Divider orientation='vertical' flexItem='true'/> */}
-                                <Grid item xs={2}>
+                                <Grid item sm={2} xs={4}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
                                         <p>63°/43°</p>
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                {/* <Divider orientation='vertical' flexItem='true'/> */}
-                                <Grid item xs={2}>
+                                <Grid item sm={2} xs={4}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
                                         <p>63°/43°</p>
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                {/* <Divider orientation='vertical' flexItem='true'/> */}
-                                <Grid item xs={2}>
+                                <Grid item sm={2} xs={4}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
                                         <p>63°/43°</p>
                                         <CloudSVG/>
                                     </Box>
                                 </Grid>
-                                {/* <Divider orientation='vertical' flexItem='true'/> */}
-                                <Grid item xs={2}>
+                                <Grid item sm={2} xs={4}>
                                     <Box className={classes.centerText}>
                                         <h4>1pm</h4>
                                         <p>63°/43°</p>
