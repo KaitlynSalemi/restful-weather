@@ -17,19 +17,19 @@ function CurrentWeatherConditions() {
     return (
         <Box>
             <p className={classes.currentWeatherConditions}>
-                <span className={classes.span}>High/Low:</span> 
+                <span className={classes.span}>High/Low: </span> 
                 65°/56°
             </p>
             <p className={classes.currentWeatherConditions}>
-                <span className={classes.span}>Humidity:</span> 
+                <span className={classes.span}>Humidity: </span> 
                 76%
             </p>
             <p className={classes.currentWeatherConditions}>
-                <span className={classes.span}>Wind:</span> 
+                <span className={classes.span}>Wind: </span> 
                 12mph
             </p>
             <p className={classes.currentWeatherConditions}>
-                <span className={classes.span}>UV Index:</span> 
+                <span className={classes.span}>UV Index: </span> 
                 9 of 10
             </p>
         </Box>

@@ -9,6 +9,7 @@ import CurrentCity from '../components/currentCity';
 import CurrentTemp from '../components/currentTemp';
 import CurrentWeatherDescription from '../components/currentTemp';
 import CurrentWeatherConditions from '../components/currentWeatherConditions';
+import CurrentSVG from '../components/currentSVG';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -142,7 +143,7 @@ function Home() {
                                     </Grid>
                                 </Grid>
                                 <Grid item xs={6} className={classes.currentWeatherSVG}>
-                                    <SunSVG style={{ width: '50%' }}/>
+                                    <CurrentSVG/>
                                 </Grid>
                             </Grid>
                         </CardContent>
