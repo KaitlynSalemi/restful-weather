@@ -3,11 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Heading from '../components/heading';
+import SearchField from '../components/searchField';
 import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import Button from '@material-ui/core/Button';
-import SearchIcon from '@material-ui/icons/Search';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Paper from '@material-ui/core/Paper';
@@ -123,16 +120,7 @@ function Home() {
                     <Heading />
                 </Grid>
                 <Grid item md={3} xs={12}>
-                    <form className={classes.centerText}>
-                        <TextField 
-                            className={classes.marginBottum}
-                            id="standard-basic" 
-                            label="Search" 
-                            InputProps={{
-                                endAdornment: <InputAdornment position="end"><Button><SearchIcon /></Button></InputAdornment>,
-                            }} 
-                        />
-                    </form>
+                    <SearchField/>
                     <Hidden smDown>
                         <Paper>
                             <List>
