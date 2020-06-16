@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
 import Heading from '../components/heading';
 import SearchField from '../components/searchField';
 import SearchList from '../components/searchList';
@@ -10,12 +9,12 @@ import CurrentTemp from '../components/currentTemp';
 import CurrentWeatherDescription from '../components/currentTemp';
 import CurrentWeatherConditions from '../components/currentWeatherConditions';
 import CurrentSVG from '../components/currentSVG';
+import HourlyBox from '../components/hourlyBox';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Hidden from '@material-ui/core/Hidden';
 import { ReactComponent as SunSVG } from '../assests/SVGs/sun.svg';
-import { ReactComponent as CloudSVG } from '../assests/SVGs/cloud.svg';
 
 
 
@@ -153,46 +152,22 @@ function Home() {
                         <CardContent>
                             <Grid container spacing={5}>
                                 <Grid item sm={2} xs={4}>
-                                    <Box className={classes.centerText}>
-                                        <h4>1pm</h4>
-                                        <p>63°/43°</p>
-                                        <CloudSVG/>
-                                    </Box>
+                                   <HourlyBox/>
                                 </Grid>
                                 <Grid item sm={2} xs={4}>
-                                    <Box className={classes.centerText}>
-                                        <h4>1pm</h4>
-                                        <p>63°/43°</p>
-                                        <CloudSVG/>
-                                    </Box>
+                                    <HourlyBox/>
                                 </Grid>
                                 <Grid item sm={2} xs={4}>
-                                    <Box className={classes.centerText}>
-                                        <h4>1pm</h4>
-                                        <p>63°/43°</p>
-                                        <CloudSVG/>
-                                    </Box>
+                                    <HourlyBox/>
                                 </Grid>
                                 <Grid item sm={2} xs={4}>
-                                    <Box className={classes.centerText}>
-                                        <h4>1pm</h4>
-                                        <p>63°/43°</p>
-                                        <CloudSVG/>
-                                    </Box>
+                                    <HourlyBox/>
                                 </Grid>
                                 <Grid item sm={2} xs={4}>
-                                    <Box className={classes.centerText}>
-                                        <h4>1pm</h4>
-                                        <p>63°/43°</p>
-                                        <CloudSVG/>
-                                    </Box>
+                                    <HourlyBox/>
                                 </Grid>
                                 <Grid item sm={2} xs={4}>
-                                    <Box className={classes.centerText}>
-                                        <h4>1pm</h4>
-                                        <p>63°/43°</p>
-                                        <CloudSVG/>
-                                    </Box>
+                                    <HourlyBox/>
                                 </Grid>
                             </Grid>
                         </CardContent>
