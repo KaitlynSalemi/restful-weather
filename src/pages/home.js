@@ -6,15 +6,16 @@ import SearchField from '../components/searchField';
 import SearchList from '../components/searchList';
 import CurrentCity from '../components/currentCity';
 import CurrentTemp from '../components/currentTemp';
-import CurrentWeatherDescription from '../components/currentTemp';
+import CurrentWeatherDescription from '../components/currentWeatherDescription';
 import CurrentWeatherConditions from '../components/currentWeatherConditions';
 import CurrentSVG from '../components/currentSVG';
 import HourlyBox from '../components/hourlyBox';
+import DailyCard from '../components/dailyCard';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Hidden from '@material-ui/core/Hidden';
-import { ReactComponent as SunSVG } from '../assests/SVGs/sun.svg';
+
 
 
 
@@ -56,58 +57,22 @@ function Home() {
         return (
             <React.Fragment>
                 <Grid item sm={2} xs={4}>
-                    <Card>
-                        <CardContent className={classes.centerText}>
-                            <h4>Sat 13</h4>
-                            <p>63°</p>
-                            <SunSVG/>
-                        </CardContent>
-                    </Card>
+                    <DailyCard/>
                 </Grid>
                 <Grid item sm={2} xs={4}>
-                    <Card>
-                        <CardContent className={classes.centerText}>
-                            <h4>Sat 13</h4>
-                            <p>63°</p>
-                            <SunSVG/>
-                        </CardContent>
-                    </Card>
+                    <DailyCard/>
                 </Grid>
                 <Grid item sm={2} xs={4}>
-                    <Card>
-                        <CardContent className={classes.centerText}>
-                            <h4>Sat 13</h4>
-                            <p>63°</p>
-                            <SunSVG/>
-                        </CardContent>
-                    </Card>
+                    <DailyCard/>
                 </Grid>
                 <Grid item sm={2} xs={4}>
-                    <Card>
-                        <CardContent className={classes.centerText}>
-                            <h4>Sat 13</h4>
-                            <p>63°</p>
-                            <SunSVG/>
-                        </CardContent>
-                    </Card>
+                    <DailyCard/>
                 </Grid>
                 <Grid item sm={2} xs={4}>
-                    <Card>
-                        <CardContent className={classes.centerText}>
-                            <h4>Sat 13</h4>
-                            <p>63°</p>
-                            <SunSVG/>
-                        </CardContent>
-                    </Card>
+                    <DailyCard/>
                 </Grid>
                 <Grid item sm={2} xs={4}>
-                    <Card>
-                        <CardContent className={classes.centerText}>
-                            <h4>Sat 13</h4>
-                            <p>63°</p>
-                            <SunSVG/>
-                        </CardContent>
-                    </Card>
+                    <DailyCard/>
                 </Grid>
             </React.Fragment>
         );
