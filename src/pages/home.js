@@ -4,11 +4,7 @@ import Container from '@material-ui/core/Container';
 import Heading from '../components/heading';
 import SearchField from '../components/searchField';
 import SearchList from '../components/searchList';
-import CurrentCity from '../components/currentCity';
-import CurrentTemp from '../components/currentTemp';
-import CurrentWeatherDescription from '../components/currentWeatherDescription';
-import CurrentWeatherConditions from '../components/currentWeatherConditions';
-import CurrentSVG from '../components/currentSVG';
+import CurrentCard from '../components/currentCard';
 import HourlyBox from '../components/hourlyBox';
 import DailyCard from '../components/dailyCard';
 import { makeStyles } from '@material-ui/core/styles';
@@ -53,31 +49,6 @@ const useStyles = makeStyles({
 function Home() {
     const classes = useStyles();
 
-    function FormDailyRow(){
-        return (
-            <React.Fragment>
-                <Grid item sm={2} xs={4}>
-                    <DailyCard/>
-                </Grid>
-                <Grid item sm={2} xs={4}>
-                    <DailyCard/>
-                </Grid>
-                <Grid item sm={2} xs={4}>
-                    <DailyCard/>
-                </Grid>
-                <Grid item sm={2} xs={4}>
-                    <DailyCard/>
-                </Grid>
-                <Grid item sm={2} xs={4}>
-                    <DailyCard/>
-                </Grid>
-                <Grid item sm={2} xs={4}>
-                    <DailyCard/>
-                </Grid>
-            </React.Fragment>
-        );
-    }
-
     return (
         <Container className={classes.container} maxWidth='lg'>
             <Grid container spacing={3}>
@@ -91,27 +62,7 @@ function Home() {
                     </Hidden>
                 </Grid>
                 <Grid item md={9} xs={12}>
-                    <Card>
-                        <CardContent>
-                            <Grid container>
-                                <Grid container item xs={6}>
-                                    <Grid item xs={12}>
-                                        <CurrentCity/>
-                                    </Grid>
-                                    <Grid item sm={6} xs={12}>
-                                        <CurrentTemp/>
-                                        <CurrentWeatherDescription/>
-                                    </Grid>
-                                    <Grid item sm={6} xs={12}>
-                                        <CurrentWeatherConditions/>
-                                    </Grid>
-                                </Grid>
-                                <Grid item xs={6} className={classes.currentWeatherSVG}>
-                                    <CurrentSVG/>
-                                </Grid>
-                            </Grid>
-                        </CardContent>
-                    </Card>
+                    <CurrentCard/>
                     <h3>Hourly Forcast:</h3>
                     <Card>
                         <CardContent>
@@ -139,7 +90,24 @@ function Home() {
                     </Card>
                     <h3>Daily Forcast:</h3>
                     <Grid container spacing={1}>
-                        <FormDailyRow />
+                        <Grid item sm={2} xs={4}>
+                            <DailyCard/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <DailyCard/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <DailyCard/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <DailyCard/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <DailyCard/>
+                        </Grid>
+                        <Grid item sm={2} xs={4}>
+                            <DailyCard/>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
