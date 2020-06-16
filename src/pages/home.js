@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import Heading from '../components/heading';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -119,7 +120,7 @@ function Home() {
         <Container className={classes.container} maxWidth='lg'>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <h1 className={classes.centerText}>RESTful Weather</h1>
+                    <Heading />
                 </Grid>
                 <Grid item md={3} xs={12}>
                     <form className={classes.centerText}>
