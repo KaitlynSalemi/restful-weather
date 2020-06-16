@@ -6,6 +6,7 @@ import Heading from '../components/heading';
 import SearchField from '../components/searchField';
 import SearchList from '../components/searchList';
 import CurrentCity from '../components/currentCity';
+import CurrentTempDescription from '../components/currentTempDescription';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -131,8 +132,7 @@ function Home() {
                                         <CurrentCity/>
                                     </Grid>
                                     <Grid item sm={6} xs={12}>
-                                        <h1>62°</h1>
-                                        <h3>Sunny</h3>
+                                        <CurrentTempDescription/>
                                     </Grid>
                                     <Grid item sm={6} xs={12}>
                                         <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
