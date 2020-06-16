@@ -4,15 +4,11 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Heading from '../components/heading';
 import SearchField from '../components/searchField';
+import SearchList from '../components/searchList';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Paper from '@material-ui/core/Paper';
 import Hidden from '@material-ui/core/Hidden';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Divider from '@material-ui/core/Divider';
 import { ReactComponent as SunSVG } from '../assests/SVGs/sun.svg';
 import { ReactComponent as CloudSVG } from '../assests/SVGs/cloud.svg';
 
@@ -122,31 +118,8 @@ function Home() {
                 <Grid item md={3} xs={12}>
                     <SearchField/>
                     <Hidden smDown>
-                        <Paper>
-                            <List>
-                                <ListItem button>
-                                    <ListItemText primary="Los Angeles, CA" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="New York, NY" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="Chicago, IL" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="London, England" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem button>
-                                    <ListItemText primary="Toykyo, Japan" />
-                                </ListItem>
-                            </List>
-                        </Paper>
+                        <SearchList/>
                     </Hidden>
-                    
                 </Grid>
                 <Grid item md={9} xs={12}>
                     <Card>
