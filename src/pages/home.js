@@ -155,20 +155,24 @@ function Home() {
                     <Card>
                         <CardContent>
                             <Grid container>
-                                <Grid item md={3} xs={12}>
-                                    <Box m={2}>
+                                <Grid container item md={6} xs={12}>
+                                    <Grid item xs={12}>
                                         <h2>Evanston, IL</h2>
-                                        <h1>62°</h1>
-                                        <h3>Sunny</h3>
-                                    </Box>
-                                </Grid>
-                                <Grid item md={3} xs={12}>
-                                    <Box m={2}>
-                                        <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
-                                        <p><span className={classes.bold}>Humidity:</span> 76%</p>
-                                        <p><span className={classes.bold}>Wind:</span> 12mph</p>
-                                        <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
-                                    </Box>
+                                    </Grid>
+                                    <Grid item md={6} xs={12}>
+                                        <Box m={0}>
+                                            <h1>62°</h1>
+                                            <h3>Sunny</h3>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item md={6} xs={12}>
+                                        <Box m={0}>
+                                            <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
+                                            <p><span className={classes.bold}>Humidity:</span> 76%</p>
+                                            <p><span className={classes.bold}>Wind:</span> 12mph</p>
+                                            <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
+                                        </Box>
+                                    </Grid>
                                 </Grid>
                                 <Grid item md={6} xs={12} className={classes.centerText}>
                                     <SunSVG style={{ width: '50%' }}/>
