@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import Heading from '../components/heading';
 import SearchField from '../components/searchField';
 import SearchList from '../components/searchList';
+import CurrentCity from '../components/currentCity';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -127,21 +128,17 @@ function Home() {
                             <Grid container>
                                 <Grid container item xs={6}>
                                     <Grid item xs={12}>
-                                        <h2>Evanston, IL</h2>
+                                        <CurrentCity/>
                                     </Grid>
                                     <Grid item sm={6} xs={12}>
-                                        <Box>
-                                            <h1>62°</h1>
-                                            <h3>Sunny</h3>
-                                        </Box>
+                                        <h1>62°</h1>
+                                        <h3>Sunny</h3>
                                     </Grid>
                                     <Grid item sm={6} xs={12}>
-                                        <Box>
-                                            <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
-                                            <p><span className={classes.bold}>Humidity:</span> 76%</p>
-                                            <p><span className={classes.bold}>Wind:</span> 12mph</p>
-                                            <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
-                                        </Box>
+                                        <p><span className={classes.bold}>High/Low:</span> 65°/56°</p>
+                                        <p><span className={classes.bold}>Humidity:</span> 76%</p>
+                                        <p><span className={classes.bold}>Wind:</span> 12mph</p>
+                                        <p><span className={classes.bold}>UV Index:</span> 9 of 10</p>
                                     </Grid>
                                 </Grid>
                                 <Grid item xs={6} className={classes.currentWeatherSVG}>
